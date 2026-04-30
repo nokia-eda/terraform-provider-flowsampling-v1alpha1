@@ -1,0 +1,16 @@
+Path,Method,Schema,Model Name,Supported,Datasource,Resource
+/apps/flowsampling.eda.nokia.com,GET,AppGroup,app_group,true,true,false
+/apps/flowsampling.eda.nokia.com/v1alpha1,GET,ResourceList,resource_list,true,true,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/_ui/{pathname},GET,UIResult,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows,DELETE,com.nokia.eda.flowsampling.v1alpha1.SFlowList,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows,GET,com.nokia.eda.flowsampling.v1alpha1.SFlowList,s_flow_list,true,true,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows,POST,com.nokia.eda.flowsampling.v1alpha1.SFlow,s_flow,true,false,true
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/_deleted,GET,com.nokia.eda.flowsampling.v1alpha1.SFlow_DeletedResources,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name},DELETE,Status,s_flow,true,false,true
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name},GET,com.nokia.eda.flowsampling.v1alpha1.SFlow,s_flow,true,true,true
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name},PATCH,com.nokia.eda.flowsampling.v1alpha1.SFlow,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name},PUT,com.nokia.eda.flowsampling.v1alpha1.SFlow,s_flow,true,false,true
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}/_revs,GET,ResourceHistory,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}/_targets,GET,IntentTargets,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}/_topology,POST,K8STopologyRequest,,false,false,false
+/apps/flowsampling.eda.nokia.com/v1alpha1/sflows,GET,com.nokia.eda.flowsampling.v1alpha1.SFlowList,,false,false,false

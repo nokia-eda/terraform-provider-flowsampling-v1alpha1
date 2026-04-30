@@ -1,0 +1,38 @@
+provider:
+  name: flowsampling
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/flowsampling.eda.nokia.com
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1
+      method: GET
+
+  s_flow:
+    read:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}
+      method: GET
+
+  s_flow_list:
+    read:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows
+      method: GET
+
+resources:
+  s_flow:
+    create:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows
+      method: POST
+    read:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}
+      method: GET
+    update:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}
+      method: PUT
+    delete:
+      path: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}
+      method: DELETE
