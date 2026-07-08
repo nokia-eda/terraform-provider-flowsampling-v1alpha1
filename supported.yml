@@ -1,0 +1,30 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/flowsampling.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/flowsampling.eda.nokia.com/v1alpha1
+    oas_schema: ResourceList
+  - model_name: s_flow_list
+    oas_endpoint: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows
+    oas_schema: com.nokia.eda.flowsampling.v1alpha1.SFlowList
+  - model_name: s_flow
+    oas_endpoint: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}
+    oas_schema: com.nokia.eda.flowsampling.v1alpha1.SFlow
+
+resources:
+  - model_name: s_flow
+    oas_endpoint: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows
+    oas_schema: com.nokia.eda.flowsampling.v1alpha1.SFlow
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/flowsampling.eda.nokia.com/v1alpha1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.flowsampling.v1alpha1.SFlow_DeletedResources
+      get: /apps/flowsampling.eda.nokia.com/v1alpha1/namespaces/{namespace}/sflows/_deleted
+  resources:
