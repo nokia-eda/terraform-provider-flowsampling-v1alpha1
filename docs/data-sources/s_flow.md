@@ -23,7 +23,6 @@ description: |-
 ### Optional
 
 - `hash` (String) resource content will be returned as it was at the time of this git hash
-- `spec` (Attributes) SFlowSpec allows the configuration of sFlow sampling on selected interfaces. (see [below for nested schema](#nestedatt--spec))
 
 ### Read-Only
 
@@ -32,33 +31,8 @@ description: |-
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--metadata))
+- `spec` (Attributes) SFlowSpec allows the configuration of sFlow sampling on selected interfaces. (see [below for nested schema](#nestedatt--spec))
 - `status` (Attributes) SFlowStatus defines the observed state of SFlow (see [below for nested schema](#nestedatt--status))
-
-<a id="nestedatt--spec"></a>
-### Nested Schema for `spec`
-
-Optional:
-
-- `collectors` (Attributes List) A list of sFlow collectors to which sampled data is sent. (see [below for nested schema](#nestedatt--spec--collectors))
-- `dscp` (Number) DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used.
-- `interface_selectors` (List of String) Specifies a list of label selectors to filter the interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.
-- `interfaces` (List of String) Specifies a list of Interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.
-- `mode` (String) Specifies the sampling mode (ingress, egress, or both) for sFlow sampling on the selected interfaces. Ingress is used by default.
-- `rate` (Number) Sampling rate. For example, a value of 16384 means that one out of every 16384 packets is sampled. [Default: 1048576]
-- `sample_size_bytes` (Number) Sample size (in bytes). [default: 256]
-
-<a id="nestedatt--spec--collectors"></a>
-### Nested Schema for `spec.collectors`
-
-Optional:
-
-- `address` (String) IP address of the sFlow collector.
-- `port` (Number) UDP port number of the sFlow collector.
-- `router` (String) Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.
-- `router_kind` (String) Kind of the router used to reach the sFlow collector.
-- `router_selectors` (List of String) Selects router resources to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.
-
-
 
 <a id="nestedatt--alarms"></a>
 ### Nested Schema for `alarms`
@@ -88,6 +62,32 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--spec"></a>
+### Nested Schema for `spec`
+
+Read-Only:
+
+- `collectors` (Attributes List) A list of sFlow collectors to which sampled data is sent. (see [below for nested schema](#nestedatt--spec--collectors))
+- `dscp` (Number) DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used.
+- `interface_selectors` (List of String) Specifies a list of label selectors to filter the interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.
+- `interfaces` (List of String) Specifies a list of Interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.
+- `mode` (String) Specifies the sampling mode (ingress, egress, or both) for sFlow sampling on the selected interfaces. Ingress is used by default.
+- `rate` (Number) Sampling rate. For example, a value of 16384 means that one out of every 16384 packets is sampled. [Default: 1048576]
+- `sample_size_bytes` (Number) Sample size (in bytes). [default: 256]
+
+<a id="nestedatt--spec--collectors"></a>
+### Nested Schema for `spec.collectors`
+
+Read-Only:
+
+- `address` (String) IP address of the sFlow collector.
+- `port` (Number) UDP port number of the sFlow collector.
+- `router` (String) Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.
+- `router_kind` (String) Kind of the router used to reach the sFlow collector.
+- `router_selectors` (List of String) Selects router resources to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.
+
 
 
 <a id="nestedatt--status"></a>

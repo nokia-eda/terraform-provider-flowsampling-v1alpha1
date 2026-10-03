@@ -147,6 +147,7 @@ func SFlowResourceSchema(ctx context.Context) schema.Schema {
 								},
 								"router": schema.StringAttribute{
 									Optional:            true,
+									Computed:            true,
 									Description:         "Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.",
 									MarkdownDescription: "Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.",
 								},
@@ -165,6 +166,7 @@ func SFlowResourceSchema(ctx context.Context) schema.Schema {
 								"router_selectors": schema.ListAttribute{
 									ElementType:         types.StringType,
 									Optional:            true,
+									Computed:            true,
 									Description:         "Selects router resources to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.",
 									MarkdownDescription: "Selects router resources to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty.",
 								},
@@ -184,6 +186,7 @@ func SFlowResourceSchema(ctx context.Context) schema.Schema {
 					},
 					"dscp": schema.Int64Attribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used.",
 						MarkdownDescription: "DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used.",
 						Validators: []validator.Int64{
@@ -193,12 +196,14 @@ func SFlowResourceSchema(ctx context.Context) schema.Schema {
 					"interface_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Specifies a list of label selectors to filter the interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.",
 						MarkdownDescription: "Specifies a list of label selectors to filter the interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.",
 					},
 					"interfaces": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Specifies a list of Interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.",
 						MarkdownDescription: "Specifies a list of Interfaces on which to enable sFlow sampling. If both Interfaces and InterfaceSelector are used, the union (logical OR) of the two sets is used.",
 					},
@@ -281,6 +286,9 @@ func SFlowResourceSchema(ctx context.Context) schema.Schema {
 						Computed:            true,
 						Description:         "Indicates the health score of the SFlow.",
 						MarkdownDescription: "Indicates the health score of the SFlow.",
+						Validators: []validator.Int64{
+							int64validator.AtMost(100),
+						},
 					},
 					"health_score_reason": schema.StringAttribute{
 						Optional:            true,

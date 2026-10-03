@@ -262,46 +262,46 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "collectors",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "address",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "IP address of the sFlow collector."
                                                     }
                                                 },
                                                 {
                                                     "name": "port",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "UDP port number of the sFlow collector."
                                                     }
                                                 },
                                                 {
                                                     "name": "router",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty."
                                                     }
                                                 },
                                                 {
                                                     "name": "router_kind",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Kind of the router used to reach the sFlow collector."
                                                     }
                                                 },
                                                 {
                                                     "name": "router_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -316,14 +316,14 @@
                                 {
                                     "name": "dscp",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used."
                                     }
                                 },
                                 {
                                     "name": "interface_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -333,7 +333,7 @@
                                 {
                                     "name": "interfaces",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -343,21 +343,21 @@
                                 {
                                     "name": "mode",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Specifies the sampling mode (ingress, egress, or both) for sFlow sampling on the selected interfaces. Ingress is used by default."
                                     }
                                 },
                                 {
                                     "name": "rate",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Sampling rate. For example, a value of 16384 means that one out of every 16384 packets is sampled. [Default: 1048576]"
                                     }
                                 },
                                 {
                                     "name": "sample_size_bytes",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Sample size (in bytes). [default: 256]"
                                     }
                                 }
@@ -609,46 +609,46 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "collectors",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "address",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "IP address of the sFlow collector."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "port",
                                                                     "int64": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "UDP port number of the sFlow collector."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "router",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "router_kind",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Kind of the router used to reach the sFlow collector."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "router_selectors",
                                                                     "list": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "element_type": {
                                                                             "string": {}
                                                                         },
@@ -663,14 +663,14 @@
                                                 {
                                                     "name": "dscp",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used."
                                                     }
                                                 },
                                                 {
                                                     "name": "interface_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -680,7 +680,7 @@
                                                 {
                                                     "name": "interfaces",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -690,21 +690,21 @@
                                                 {
                                                     "name": "mode",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Specifies the sampling mode (ingress, egress, or both) for sFlow sampling on the selected interfaces. Ingress is used by default."
                                                     }
                                                 },
                                                 {
                                                     "name": "rate",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Sampling rate. For example, a value of 16384 means that one out of every 16384 packets is sampled. [Default: 1048576]"
                                                     }
                                                 },
                                                 {
                                                     "name": "sample_size_bytes",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Sample size (in bytes). [default: 256]"
                                                     }
                                                 }
@@ -1025,7 +1025,7 @@
                                                 {
                                                     "name": "router",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "Selects a Router used to reach the sFlow collector. Router or RouterSelector required only when the `Router` kind is used, otherwise should be empty."
                                                     }
                                                 },
@@ -1051,7 +1051,7 @@
                                                 {
                                                     "name": "router_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -1078,7 +1078,7 @@
                                 {
                                     "name": "dscp",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "DSCP value to use for sFlow packets. If not specified, the system default DSCP value is used.",
                                         "validators": [
                                             {
@@ -1097,7 +1097,7 @@
                                 {
                                     "name": "interface_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -1107,7 +1107,7 @@
                                 {
                                     "name": "interfaces",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -1228,7 +1228,19 @@
                                     "name": "health",
                                     "int64": {
                                         "computed_optional_required": "computed_optional",
-                                        "description": "Indicates the health score of the SFlow."
+                                        "description": "Indicates the health score of the SFlow.",
+                                        "validators": [
+                                            {
+                                                "custom": {
+                                                    "imports": [
+                                                        {
+                                                            "path": "github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
+                                                        }
+                                                    ],
+                                                    "schema_definition": "int64validator.AtMost(100)"
+                                                }
+                                            }
+                                        ]
                                     }
                                 },
                                 {
